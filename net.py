@@ -44,7 +44,7 @@ model.add(Dense(512, activation='relu'))
 model.add(Dense(10, activation='softmax'))
 
 sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
-model.compile(loss='binary_crossentropy',
+model.compile(loss='mse',
               optimizer='adam',
               metrics=['accuracy'])
 '''
