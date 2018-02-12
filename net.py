@@ -4,6 +4,7 @@ from keras.models import Sequential
 from keras.models import Model
 from keras.layers import Dense, Dropout, Activation
 from keras.optimizers import SGD
+from keras.models import load_model
 # Generate dummy data
 x_train = np.random.random((10, 20))
 y_train = np.random.randint(2, size=(10, 10))
@@ -59,11 +60,13 @@ model.fit(X1, Y1, nb_epoch=5000, batch_size=10,  verbose=2)
 numpy.savetxt("trainresults.csv", PredTestSet, delimiter=",")
 numpy.savetxt("valresults.csv", PredValSet, delimiter=",")
 '''
+y_test=[]
+x_test=[]
 x_tra = []
 y_tra=[]
 xtr=[]
 ytr=[]
-csvFile = open("sp.csv", "rb")
+csvFile = open("traindata.csv", "rb")
 csvReader = csv.reader(csvFile)
 i=0
 for row in csvReader:
@@ -71,11 +74,23 @@ for row in csvReader:
 	y_tra=row[20:30]
 	xtr.append(x_tra)
 	ytr.append(y_tra)
+csvFile = open("testdata.csv", "rb")
+csvReader = csv.reader(csvFile)
+for row in csvReader:
+	x_tra = row[0:20]
+	y_tra = row[20:30]
+	x_test.append(x_tra)
+	y_test.append(y_tra)
 x=[10,20,30,40,50,60,70,80,90,100,1,2,3,4,5,6,7,8,9,10]
-model.fit(xtr, ytr,epochs=20,batch_size=1)
-score = model.evaluate(x_test, y_test, batch_size=128)
+model.fit(xtr, ytr,epochs=100,batch_size=256)
+score = model.evaluate(x_test, y_test, batch_size=256)
+print score
 xtet=[]
 xtet.append(x)
 ytr=model.predict_proba(np.array(xtet))
+model.save('model/my_model.h5')
 print ytr
-
+'''
+from keras.callbacks import EarlyStopping
+early_stopping = EarlyStopping(monitor='val_loss', patience=2)
+model.fit(x, y, validation_split=0.2, callbacks=[early_stopping])'''

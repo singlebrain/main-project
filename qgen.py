@@ -1,13 +1,18 @@
 import csv
 import numpy as np
+from keras.models import load_model
 from random import *
-x=[1,2,3,4,5,6,7,8,9,10]
+model = load_model('model/my_model.h5')
+xtet=[10,20,30,40,50,60,70,80,90,95,]
+ytr=model.predict_proba(np.array(xtet))
+ytr=ytr.tolist()
+print x
 mark=[10,20,30,40,50,60,70,80,90]
-i=x.index(min(x))
-if mark[i]>70:
+i=ytr.index(max(ytr))
+if mark[i]>75:
 	csvFile = open("questions/%02dh.csv"%i, "rb")
 elif mark[i] >40:
-	csvFile = open("questions/%02dm.csv" % i, "rb")
+	csvFile = open("questions/%02dm.csv" %i, "rb")
 else:
 	csvFile = open("questions/%02de.csv"%i, "rb")
 
