@@ -20,6 +20,7 @@ def login():
    		password = request.form['password']
    		user = dbHandler.retrieveUsers()
 		udic=dict( user)
+		print udic
 		if username not in udic.keys():
 			flash('user not found!')
 		elif password==udic[username]:
@@ -49,13 +50,6 @@ def signup():
 '''
 @app.route("/questions",methods=['POST', 'GET'])
 def questions():
-    if request.method=='POST':
-	return render_template('questions.html',data=data)	
-	choice = request.form['foo']
-	data =  session.get('answer')
-	print choice
-	return render_template('questions.html',data=data)
-    else:
 	model = load_model('model/my_model.h5')
 	xtet=[[10,20,30,40,50,60,70,80,90,95,1,2,3,4,5,6,7,8,9,10]]
 	ytr=model.predict_proba(np.array(xtet))
@@ -64,6 +58,7 @@ def questions():
 	
 	mark=[10,20,30,40,50,60,70,80,90]
 	i=ytr.index(max(ytr))
+	session['subject']=i
 	if mark[i]>75:
 		csvFile = open("questions/%02dh.csv"%i, "rb")
 	elif mark[i] >40:
@@ -90,7 +85,22 @@ def questions():
 	data.append(  answer[i])
 	session['answer']=data
 	return render_template("questions.html" , data=data)
-    
+@app.route("/answercheck",methods=['POST', 'GET'])
+def answercheck():
+	choice = request.form['foo']
+	data =  session.get('answer')
+	print choice
+	print data[2][0]
+	i=session.get('subject')
+	print i
+	if choice==data[2][0]:
+		rep=['your answer is correct']
+	else:
+		rep = ['your answer is wrong']
+	data.append(rep)
+	data.append(choice)
+	print data
+	return render_template("response.html" , data=data,choice=choice)   
 @app.route("/dashboard")
 def dashb():
     return render_template("dashboard.html" , text="asd")

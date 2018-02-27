@@ -22,3 +22,11 @@ def userdetail(username):
 	con.close()
 	return user
 
+def useralldetail(username):
+	con = sql.connect("database.db")
+	cur = con.cursor()
+	cur.execute("SELECT * FROM users WHERE username=%02s")%username
+	user = cur.fetchall()
+	con.close()
+	return user
+
