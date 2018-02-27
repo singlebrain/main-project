@@ -1,3 +1,4 @@
+from datetime import timedelta
 import csv
 import os
 import numpy as np
@@ -51,13 +52,23 @@ def signup():
 @app.route("/questions",methods=['POST', 'GET'])
 def questions():
 	model = load_model('model/my_model.h5')
-	xtet=[[10,20,30,40,50,60,70,80,90,95,1,2,3,4,5,6,7,8,9,10]]
+	username=session.get('username')
+	userdata=dbHandler.useralldetail(username)
+	userdata=list(userdata[0])
+	print userdata
+	eff=userdata[3:23]
+	print eff
+	xtet=[]
+	xtet.append(eff)
+	print xtet
+	#xtet=[[10,20,30,40,50,60,70,80,90,95,1,2,3,4,5,6,7,8,9,10]]
 	ytr=model.predict_proba(np.array(xtet))
 	ytr=ytr.tolist()
-	#print ytr
-	
+	print ytr
+	ytr=ytr[0]
 	mark=[10,20,30,40,50,60,70,80,90]
 	i=ytr.index(max(ytr))
+	print i
 	session['subject']=i
 	if mark[i]>75:
 		csvFile = open("questions/%02dh.csv"%i, "rb")
@@ -92,11 +103,15 @@ def answercheck():
 	print choice
 	print data[2][0]
 	i=session.get('subject')
+	username=session.get('username')
+	print username
 	print i
 	if choice==data[2][0]:
 		rep=['your answer is correct']
+		dbHandler.increasemark(i,username)
 	else:
 		rep = ['your answer is wrong']
+		dbHandler.decreasemark(i,username)
 	data.append(rep)
 	data.append(choice)
 	print data
@@ -116,6 +131,11 @@ def aboutus():
 @app.route("/user")
 def user():
     return render_template("user.html" , text="asd")
+
+@app.before_request
+def make_session_permanent():
+	session.permanent = True
+	app.permanent_session_lifetime = timedelta(minutes=30)
 
 if __name__ == "__main__":
 	app.secret_key = os.urandom(12)
