@@ -1,0 +1,28 @@
+drop table if exists users;
+    create table users (
+    id integer primary key autoincrement,
+    username text not null,
+    password text not null,
+	m0 int,	
+	m1 int,
+	m2 int,
+	m3 int,
+	m4 int,
+	m5 int,
+	m6 int,
+	m7 int,
+	m8 int,
+	m9 int,
+	t0 int,	
+	t1 int,
+	t2 int,
+	t3 int,
+	t4 int,
+	t5 int,
+	t6 int,
+	t7 int,
+	t8 int,
+	t9 int,
+	email text ,
+	phone text
+);
