@@ -32,7 +32,7 @@ def login():
 			flash('wrong password!')
 		return home()
    	else:
-   		return render_template('index.html')
+   		return render_template('login.html')
 @app.route("/logout")
 def logout():
 	session.pop('logged_in',None)
@@ -41,11 +41,15 @@ def logout():
 @app.route("/signup",methods=['POST', 'GET'])
 def signup():
 	if request.method=='POST':
+		print "qwertyuio1\n"
    		username = request.form['username']
+		print "zxcvbnm"
+   		email = request.form['email']
    		password = request.form['password']
-   		dbHandler.insertUser(username, password)
-   		users = dbHandler.retrieveUsers()
-		return render_template('register.html')
+   		dbHandler.insertUser(username, password,email)
+   		#users = dbHandler.retrieveUsers()
+		return redirect(url_for('home'))
+		#return render_template('register.html')
    	else:
    		return render_template('register.html')
 @app.route("/questions",methods=['POST', 'GET'])
@@ -94,7 +98,7 @@ def questions():
 	data.append(  choice[i])
 	data.append(  answer[i])
 	session['answer']=data
-	return render_template("questions.html" , data=data)
+	return render_template("questions.html" , data=data,username=username)
 @app.route("/answercheck",methods=['POST', 'GET'])
 def answercheck():
 	choice = request.form['foo']
@@ -148,7 +152,8 @@ def dashboard():
  
 @app.route("/notes")
 def notes():
-    return render_template("notes.html" , text="asd")
+    username=session.get('username')
+    return render_template("notes.html" ,username=username)
 
 @app.route("/aboutus")
 def aboutus():
@@ -156,6 +161,7 @@ def aboutus():
     
 @app.route("/user",methods=['POST', 'GET'])
 def user():
+	username=session.get('username')
 	if request.method=='POST':
 		print "post"
 		email = request.form['email']
@@ -168,7 +174,7 @@ def user():
 		dbHandler.updateuser(username,password,email,phone)
 		return redirect(url_for('dashboard'))
 	else:
-		return render_template("user.html" , text="asd")
+		return render_template("user.html" , username=username)
 
 @app.before_request
 def make_session_permanent():

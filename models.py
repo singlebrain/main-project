@@ -1,9 +1,14 @@
 import sqlite3 as sql
+import datetime
 
-def insertUser(username,password):
+def insertUser(username,password,email):
     con = sql.connect("database.db")
     cur = con.cursor()
-    cur.execute("INSERT INTO users (username,password) VALUES (?,?)", (username,password))
+    cur.execute("INSERT INTO users (username,password,email) VALUES (?,?,?)", (username,password,email))
+    con.commit()
+    now = datetime.datetime.now()	
+    current=now.year*100+now.month
+    cur.execute("INSERT INTO logintime (username,lastin) VALUES (?,?)", (username,current))	
     con.commit()
     con.close()
 
