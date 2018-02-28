@@ -47,7 +47,7 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="/user">
                             <i class="material-icons">person</i>
                             <p>User Profile</p>
@@ -65,10 +65,16 @@
                             <p>Notes</p>
                         </a>
                     </li>
-                    <li class="active">
+                    <li >
                         <a href="/aboutus">
                             <i class="material-icons">bubble_chart</i>
                             <p>About Us</p>
+                        </a>
+                    </li>
+			<li >
+                        <a href="/logout">
+                            <i class="material-icons">power_off</i>
+                            <p>Log Out</p>
                         </a>
                     </li>
                
@@ -84,7 +90,7 @@
                      
                     </div>
                 </div>
-            </nav>            <div class="content">
+            </nav>            <div class="">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-8">
@@ -94,20 +100,13 @@
                                     <p class="category">Complete your profile</p>
                                 </div>
                                 <div class="card-content">
-                                    <form action="" method = "post">
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Name</label>
-                                                    <input type="text" id="username" class="form-control" disabled>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <form action="/user" method = "post">
+                                        
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Email address</label>
-                                                    <input type="text" id="email" class="form-control">
+                                                    <input type="text" name="email" id="email" class="form-control" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -115,7 +114,7 @@
                                             <div class="col-md-7">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Phone number</label>
-                                                    <input type="text" id="phone" class="form-control">
+                                                    <input type="text" name="phone" id="phone" class="form-control" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -123,32 +122,21 @@
                                             <div class="col-md-8">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Password</label>
-                                                    <input type="text" id="password" class="form-control">
+                                                    <input type="password" name="password" id="password" class="form-control" required>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="clearfix"></div>
-                                        <button class="btn btn-primary pull-right" type="submit">
-                                            Update profile
-                                        <div class="ripple-container"></div>
-                                        </button>
+                                        <input class="btn btn-primary pull-right" type="submit">
+                                            
+                                       
                                     </form>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="card card-profile">
-                                <div class="card-avatar">
-                                    <a href="#pablo">
-                                        <img class="img" src=",,/assets/img/faces/marc.jpg">
-                                    </a>
-                                </div>
-                                <div class="content">
-                                <a class="btn btn-primary btn-round" href="#pablo">
-                                    Update
-                                    <div class="ripple-container"></div>
-                                </a>
-                                </div>
+                                
+                                
                             </div>
                         </div>
                     </div>

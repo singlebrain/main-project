@@ -7,6 +7,17 @@ def insertUser(username,password):
     con.commit()
     con.close()
 
+def updateuser(username,password,email,phone):
+	con = sql.connect("database.db")
+	cur = con.cursor()
+	print username
+	print password
+	print email
+	print phone 
+	cur.execute("UPDATE users SET password = \'"+str(password)+"\',email = \'"+str(email)+"\',phone = \'"+str(phone)+"\' WHERE username = \'"+str(username)+"\'")
+	con.commit()
+	con.close()
+
 def insertlife(username,current,values):
 	con = sql.connect("database.db")
 	cur = con.cursor()
@@ -54,7 +65,7 @@ def useralldetail(username):
 def logindetail(username):
 	con = sql.connect("database.db")
 	cur = con.cursor()
-	cur.execute("SELECT * FROM logintime WHERE username=\'"+username+"\'")
+	cur.execute("SELECT * FROM logintime WHERE username=\'"+str(username)+"\'")
 	user = cur.fetchall()
 	con.close()
 	return user

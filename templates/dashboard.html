@@ -53,34 +53,40 @@
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <li>
-                        <a href="dashboard.html">
+                    <li class="active">
+                        <a href="/dashboard">
                             <i class="material-icons">dashboard</i>
                             <p>Dashboard</p>
                         </a>
                     </li>
                     <li>
-                        <a href="user.html">
+                        <a href="/user">
                             <i class="material-icons">person</i>
                             <p>User Profile</p>
                         </a>
                     </li>
                     <li>
-                        <a href="questions.html">
+                        <a href="/questions">
                             <i class="material-icons">content_paste</i>
                             <p>Questions</p>
                         </a>
                     </li>
                     <li>
-                        <a href="notes.html">
+                        <a href="/notes">
                             <i class="material-icons">library_books</i>
                             <p>Notes</p>
                         </a>
                     </li>
-                    <li class="active">
-                        <a href="aboutus.html">
+                    <li >
+                        <a href="/aboutus">
                             <i class="material-icons">bubble_chart</i>
                             <p>About Us</p>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="/logout">
+                            <i class="material-icons">power_off</i>
+                            <p>Log Out</p>
                         </a>
                     </li>
                
@@ -206,8 +212,9 @@
               {% endfor %}],
    datasets : [
       {
-            fillColor: "rgba(200,90,105,0)",
-            strokeColor: "rgba(200,90,105,1)",
+            label: "operating",
+	    fillColor: "rgba(200,90,105,0)",
+            strokeColor: "#002b36",
             pointColor: "rgba(151,187,205,1)",
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
@@ -217,8 +224,9 @@
                       {{item[0]}},
                     {% endfor %}]
       },{
+	    label: "operating",
             fillColor: "rgba(10,200,120,0)",
-            strokeColor: "rgba(10,200,120,1)",
+            strokeColor: "#dc322f",
             pointColor: "rgba(151,187,205,1)",
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
@@ -228,8 +236,9 @@
                       {{item[1]}},
                     {% endfor %}]
       },{
+	    label: "operating",
             fillColor: "rgba(20,180,150,0)",
-            strokeColor: "rgba(20,180,150,1)",
+            strokeColor: "b58900",
             pointColor: "rgba(151,187,205,1)",
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
@@ -239,8 +248,9 @@
                       {{item[2]}},
                     {% endfor %}]
       },{
+	    label: "operating",
             fillColor: "rgba(35,150,180,0)",
-            strokeColor: "rgba(35,150,180,1)",
+            strokeColor: "#bdf8ff",
             pointColor: "rgba(151,187,205,1)",
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
@@ -250,8 +260,9 @@
                       {{item[3]}},
                     {% endfor %}]
       },{
+	    label: "operating",
             fillColor: "rgba(50,130,200,0)",
-            strokeColor: "rgba(50,130,200,1)",
+            strokeColor: "#63193b",
             pointColor: "rgba(151,187,205,1)",
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
@@ -261,8 +272,9 @@
                       {{item[4]}},
                     {% endfor %}]
       },{
+	    label: "operating",
             fillColor: "rgba(65,100,80,0)",
-            strokeColor: "rgba(65,100,80,1)",
+            strokeColor: "#fcebcf",
             pointColor: "rgba(151,187,205,1)",
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
@@ -272,8 +284,9 @@
                       {{item[5]}},
                     {% endfor %}]
       },{
+	    label: "operating",
             fillColor: "rgba(80,70,190,0)",
-            strokeColor: "rgba(80,70,190,1)",
+            strokeColor: "#ffc705",
             pointColor: "rgba(151,187,205,1)",
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
@@ -283,8 +296,9 @@
                       {{item[6]}},
                     {% endfor %}]
       },{
+	    label: "operating",
             fillColor: "rgba(100,50,60,0)",
-            strokeColor: "rgba(100,50,60,1)",
+            strokeColor: "#2ca02c",
             pointColor: "rgba(151,187,205,1)",
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
@@ -294,8 +308,9 @@
                       {{item[7]}},
                     {% endfor %}]
       },{
+	    label: "operating",
             fillColor: "rgba(120,30,40,0)",
-            strokeColor: "rgba(120,30,40,1)",
+            strokeColor: "#c7bfaa",
             pointColor: "rgba(151,187,205,1)",
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
@@ -305,8 +320,9 @@
                       {{item[8]}},
                     {% endfor %}]
       },{
+	    label: "operating",
             fillColor: "rgba(140,10,10,0)",
-            strokeColor: "rgba(140,10,10,1)",
+            strokeColor: "#7a339c",
             pointColor: "rgba(151,187,205,1)",
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
@@ -316,6 +332,7 @@
                       {{item[9]}},
                     {% endfor %}]
       }]
+
    }
  
     Chart.defaults.global.animationSteps = 50;
@@ -349,7 +366,16 @@
  
  
 </script>
-
+<p><font color="#002b36">Operating system </font>
+<font color="#dc322f">    &nbsp  Computer networks</font>
+<font color="#b58900"> &nbsp theory of comp</font></p>
+<p><font color="#bdf8ff">Computer arch </font>
+<font color="#63193b"> &nbsp  Compiler design</font>
+<font color="#fcebcf"> &nbsp Mathematics</font></p>
+<p><font color="#ffc705">Data structures </font>
+<font color="#2ca02c"> &nbsp  Algorithms</font>
+<font color="#c7bfaa"> &nbsp Digital Electronics</font></p>
+<p><font color="#7a339c">DBMs </font></p>
                                 <div class="card-content">
                                     <h4 class="title">Subject Analysis</h4>
                                    

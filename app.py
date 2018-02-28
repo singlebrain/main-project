@@ -38,7 +38,6 @@ def logout():
 	session.pop('logged_in',None)
 	session.pop('username',None)
 	return home()
-'''
 @app.route("/signup",methods=['POST', 'GET'])
 def signup():
 	if request.method=='POST':
@@ -46,10 +45,9 @@ def signup():
    		password = request.form['password']
    		dbHandler.insertUser(username, password)
    		users = dbHandler.retrieveUsers()
-		return render_template('index.html', users=users)
+		return render_template('register.html')
    	else:
-   		return render_template('index.html')
-'''
+   		return render_template('register.html')
 @app.route("/questions",methods=['POST', 'GET'])
 def questions():
 	model = load_model('model/my_model.h5')
@@ -156,9 +154,21 @@ def notes():
 def aboutus():
     return render_template("aboutus.html" , text="asd")
     
-@app.route("/user")
+@app.route("/user",methods=['POST', 'GET'])
 def user():
-    return render_template("user.html" , text="asd")
+	if request.method=='POST':
+		print "post"
+		email = request.form['email']
+		print "post3"
+		phone = request.form['phone']
+		print "post2"
+   		password = request.form['password']
+		username=session.get('username')
+		print "post1"
+		dbHandler.updateuser(username,password,email,phone)
+		return redirect(url_for('dashboard'))
+	else:
+		return render_template("user.html" , text="asd")
 
 @app.before_request
 def make_session_permanent():
