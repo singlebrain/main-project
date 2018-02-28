@@ -1,4 +1,5 @@
 from datetime import timedelta
+import datetime
 import csv
 import os
 import numpy as np
@@ -12,7 +13,7 @@ def home():
 	if not session.get('logged_in'):
 		return redirect(url_for('login'))
 	else:
-		 return redirect(url_for('questions'))#first page to display
+		 return redirect(url_for('dashboard'))#first page to display
 
 @app.route("/login",methods=['POST', 'GET'])
 def login():
@@ -65,7 +66,7 @@ def questions():
 	ytr=model.predict_proba(np.array(xtet))
 	ytr=ytr.tolist()
 	print ytr
-	ytr=ytr[0]
+	
 	mark=[10,20,30,40,50,60,70,80,90]
 	i=ytr.index(max(ytr))
 	print i
@@ -117,9 +118,36 @@ def answercheck():
 	print data
 	return render_template("response.html" , data=data,choice=choice)   
 @app.route("/dashboard")
-def dashb():
-    return render_template("dashboard.html" , text="asd")
-    
+def dashboard():
+	username=session.get('username')
+	now = datetime.datetime.now()
+	uslog=dbHandler.logindetail(username)
+	uslog=list(uslog[0])
+	print uslog
+	print now.year
+	print now.month
+	cur=now.year*100+now.month
+	data=dbHandler.useralldetail(username)
+	data=list(data[0])
+	
+	labels = ["oper sym","Comp Net","theory comp.","comp arch","compiler","maths","data struc","Algorithm","digital elect","DBMs"]
+	values = data[3:13] #[10,9,8,7,6,4,7,8,6,7]
+	if not cur==uslog[1]:
+		dbHandler.insertlife(username,cur,values)
+	lifedata=dbHandler.retrievelife(username)
+	lifelabel=[]
+	lifevalue=[]
+	print lifedata
+	for life in lifedata:
+		life=list(life)
+		lifelabel.append(life[1])
+		life=life[2:12]
+		lifevalue.append(life)
+	print lifelabel
+	print lifevalue
+	lifedat=list(lifedata)
+	return render_template("dashboard.html" , values=values, labels=labels,username=username,lifelabel=lifelabel, lifevalue=lifevalue)
+ 
 @app.route("/notes")
 def notes():
     return render_template("notes.html" , text="asd")

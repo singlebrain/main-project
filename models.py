@@ -7,6 +7,26 @@ def insertUser(username,password):
     con.commit()
     con.close()
 
+def insertlife(username,current,values):
+	con = sql.connect("database.db")
+	cur = con.cursor()
+	values=[current]+values
+	username=str(username)
+	username.lstrip('u')
+	values=[username]+values
+	print tuple(values)
+	cur.execute("INSERT INTO lifetime  VALUES "+str(tuple(values)))
+	con.commit()
+	cur.execute("UPDATE logintime SET lastin ="+str(current)+" WHERE username = \'"+username+"\'")
+	con.commit()
+	con.close()
+def retrievelife(username):
+	con=sql.connect("database.db")
+	cur=con.cursor()
+	cur.execute("SELECT * FROM lifetime WHERE username=\'"+username+"\' ORDER BY month")
+	users = cur.fetchall()
+	con.close()
+	return users
 def retrieveUsers():
 	con = sql.connect("database.db")
 	cur = con.cursor()
@@ -24,8 +44,17 @@ def userdetail(username):
 
 def useralldetail(username):
 	con = sql.connect("database.db")
-	cur = con.cursor()
+	cur = con.cursor()	
 	cur.execute("SELECT * FROM users WHERE username=\'"+username+"\'")
+	
+	user = cur.fetchall()
+	con.close()
+	return user
+
+def logindetail(username):
+	con = sql.connect("database.db")
+	cur = con.cursor()
+	cur.execute("SELECT * FROM logintime WHERE username=\'"+username+"\'")
 	user = cur.fetchall()
 	con.close()
 	return user
