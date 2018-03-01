@@ -66,10 +66,12 @@ def questions():
 	print xtet
 	#xtet=[[10,20,30,40,50,60,70,80,90,95,1,2,3,4,5,6,7,8,9,10]]
 	ytr=model.predict_proba(np.array(xtet))
+
 	ytr=ytr.tolist()
 	print ytr
-	
-	mark=[10,20,30,40,50,60,70,80,90]
+	ytr=ytr[0]
+	#mark=[10,20,30,40,50,60,70,80,90]
+	mark=userdata[3:13]
 	i=ytr.index(max(ytr))
 	print i
 	session['subject']=i
@@ -81,7 +83,7 @@ def questions():
 		csvFile = open("questions/%02de.csv"%i, "rb")
 	
 	csvReader = csv.reader(csvFile)
-	i=0
+	j=0
 	ques=[]
 	choice=[]
 	answer=[]
@@ -93,12 +95,13 @@ def questions():
 		ques.append(qn)
 		choice.append(optn)
 		answer.append(an)
-	i=randint(0,ques.__len__()-1)
-	data.append( ques[i])
-	data.append(  choice[i])
-	data.append(  answer[i])
+	j=randint(0,ques.__len__()-1)
+	data.append( ques[j])
+	data.append(  choice[j])
+	data.append(  answer[j])
 	session['answer']=data
-	return render_template("questions.html" , data=data,username=username)
+	label = ["oper sym","Comp Net","theory comp.","comp arch","compiler","maths","data struc","Algorithm","digital elect","DBMs"]
+	return render_template("questions.html" , data=data,username=username,i=i,label=label)
 @app.route("/answercheck",methods=['POST', 'GET'])
 def answercheck():
 	choice = request.form['foo']
@@ -118,7 +121,8 @@ def answercheck():
 	data.append(rep)
 	data.append(choice)
 	print data
-	return render_template("response.html" , data=data,choice=choice)   
+	label = ["oper sym","Comp Net","theory comp.","comp arch","compiler","maths","data struc","Algorithm","digital elect","DBMs"]
+	return render_template("response.html" , data=data,choice=choice,i=i,label=label)   
 @app.route("/dashboard")
 def dashboard():
 	username=session.get('username')

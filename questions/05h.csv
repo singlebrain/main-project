@@ -1,2 +1,20 @@
-qn, opt1, opt2, opt3, opt4, anw
-what is qwe in 05 hard , ad,zxc,yhn,okm,zxc
+"The line graph L(G) of a simple graph G is defined as follows: · There is exactly one vertex v(e) in L(G) for each edge e in G. · For any two edges e and e' in G, L(G) has an edge between v(e) and v(e'), if and only if e and e'are incident with the same vertex in G. Which of the following statements is/are TRUE?
+(P) The line graph of a cycle is a cycle.
+(Q) The line graph of a clique is a clique.
+(R) The line graph of a planar graph is planar.
+(S) The line graph of a tree is a tree. ",P only,P and R only,P and R only,"P, Q and S only",a
+"Let G = (V,E) be a graph. Define ?(G) = ?d id x d, where id is the number of vertices of degree d in G. If S and T are two different trees with ?(S) = ?(T),then",|S| = 2|T|,|S| = |T|-1, |S| = |T|,|S| = |T|+1,c
+"The degree sequence of a simple graph is the sequence of the degrees of the nodes in the graph in decreasing order. Which of the following sequences can not be the degree sequence of any graph?
+I. 7, 6, 5, 4, 4, 3, 2, 1
+II. 6, 6, 6, 6, 3, 3, 2, 2
+III. 7, 6, 6, 4, 4, 3, 2, 2
+IV. 8, 7, 7, 6, 4, 2, 1, 1 ",I and II,III and IV, IV only,II and IV,d
+"Which one of the following options is CORRECT given three positive integers x, y and z, and a predicate?
+        
+      P(x) = ¬(x=1)??y(?z(x=y*z)?(y=x)?(y=1))",P(x) being true means that x is a prime number,P(x) being true means that x is a number other than 1,P(x) is always true irrespective of the value of x,P(x) being true means that x has exactly two factors other than 1 and x,a
+"Which one of the following is the most appropriate logical formula to represent the statement? ""Gold and silver ornaments are precious"". The following notations are used: G(x): x is a gold ornament S(x): x is a silver ornament P(x): x is precious",?x(P(x)?(G(x)?S(x))),?x((G(x)?S(x))?P(x)),?x((G(x)?S(x))?P(x),?x((G(x)?S(x))?P(x)),d
+"Consider the function y = |x| in the interval [-1,1]. In this interval, the function is",continuous and differentiable,continuous but not differentiable, differentiable but not continuous,neither continuous nor differentiable,b
+"What is the maximum value of the function f(x) = 2x2-2x+6 in the interval [0,2] ?",6,10,12,5.5,b
+"Using the forward Eular method to solve y''(t) = f(t), y'(0) = 0 with a step size of h, we obtain the following values of y in the first four iterations: a. 0, h f(0), h (f(0) + f(h)) and h (f(0) - f(h) + f(2h)) b. 0, 0, h2 f(0) and 2h2 f(0) + f(h) c. 0, 0, h2 f(0) and 3h2 f(0) d. 0, 0, h f(0) + h2f(0) and  h f(0) + h2 f(0) + hf(h)",a,b,c,d,d
+"The matrix A has (1, 2, 1)^T and (1, 1, 0)^T as eigenvectors, both with eigenvalue 7, and its trace is 2. The determinant of A is __________ .",84,588,49,None of tese,d
+"In a party, 60% of the invited guests are male and 40% are female. If 80% of the invited guests attended the party and if all the invited female guests attended, what would be the ratio of males to females among the attendees in the party?",2:03,1:01,3:02,2:01,b

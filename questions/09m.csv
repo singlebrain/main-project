@@ -1,2 +1,10 @@
-qn, opt1, opt2, opt3, opt4, anw
-what is qwe in 09 medium , ad,zxc,yhn,okm,zxc
+. Which of the following statements is not correct?,Data Normalization is the process of defining the table structure,The purpose of class diagrams is to model the interrelationships between the different classes in the database,Individual objects are stored as rows in a table  , Properties of an object are stored as columns in a table. ,a
+The ability to define common properties or functions in the higher class and then modify them in the lower classes is called:,Inheritance,Polymorphism,Reflexive,Transformance,b
+. A composition association is drawn using which symbol:,A line which loops back onto the same table   ,Small closed diamond at the end of a line connecting two tables ,Small open diamond at the end of a line connecting two tables ,Small triangle at the end of a line connecting the aggregated item and multiple component items ,b
+"In relational database model, after conceptually designing your database, the information contained in a single class would be stored in a:",database,field,property ,table,d
+Which of the following items is not the advantage of a DBMS? ,Improved ability to enforce standards,Improved data consistency,Local control over the data,Minimal data redundancy ,c
+"with QBE , inserting records from one or more source tables into a single target table can be achieved by:",appended action query,update action query,insert action query,make table action query,a
+an attribute of set of attributes within one relation that matches the candidate key of some relation:,super key,candidate key,primary key,foreign key,d
+The way a particular application views the data from the database that the application uses is a,module,Relational model,schema,sub schema,d
+Data security threat include,privacy invasion,hardware failure,fraudent manipulation of data,all of above,a
+A data dictionary does'nt provide information about,where data is located,who owns it,size of disk storage device,how the data is used,c

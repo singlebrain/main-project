@@ -1,2 +1,19 @@
-qn, opt1, opt2, opt3, opt4, anw
-what is qwe in 08 medium , ad,zxc,yhn,okm,zxc
+"Let f(w, x, y, z) = ?(0, 4, 5, 7, 8, 9, 13, 15). Which of the following expressions are NOT equivalent to f?", x'y'z' + w'xy' + wy'z + xz,w'y'z' + wx'y' + xz,w'y'z' + wx'y' + xyz + xy',x'y'z' + wx'y' + w'y,d
+"Consider the following combinational function block involving four Boolean variables x, y, a, b where x, a, b are inputs and y is the output.
+f (x, y, a, b)
+{
+   if (x is 1) y = a;
+   else y = b;
+}
+Which one of the following digital logic blocks is the most suitable for implementing this function?",Full adder,Priority encoder, Multiplexer,Flip-flop,c
+"Let X denote the Exclusive OR (XOR) operation. Let ‘1’ and ‘0’ denote the binary constants. Consider the following Boolean expression for F over two variables P and Q:
+F(P, Q) = ( ( 1 X P) X (P X Q) ) X ( (P X Q) X (Q X 0) ) 
+The equivalent expression for F is",P + Q, (P + Q)',P X Q, (P X Q)',d
+"Consider a Boolean function f (w, x, y, z). suppose that exactly one of its inputs is allowed to change at a time. If the function happens to be true for two input vectors i1 = (w1, x1, y1, z1) and i2 = (w2, x2, y2, z2) we would like the function to remain true as the input changes from i1 to i2 (i1 and i2 differ in exactly one bit position), without becoming false momentarily. Let f (w, x, y, z) = ?(5,7,11,12,13,15). Which of the following cube covers of f will ensure that the required property is satisfied?","w'xz, wxy', xy'z, xyz,wyz","wxy,w'xz,wyz","wx(yz)', xz, wx'yz","wzy, wyz, wxz, w'xz, xy'z, xyz",a
+"The switching expression corresponding to f(A, B, C, D) = ? (1, 4, 5, 9, 11, 12) is",BC'D' + A'C'D + AB'D,ABC' + ACD + B'C'D,ACD' + A'BC' + AC'D',A'BD + ACD' + BCD',a
+"A circuit outputs a digit in the form of 4 bits. 0 is represented by 0000, 1 by 0001, ..., 9 by 1001. A combinational circuit is to be designed which takes these 4 bits as input and outputs 1 if the digit ? 5, and 0 otherwise. If only AND, OR and NOT gates may be used, what is the minimum number of gates required?",2,3,4,5,b
+"Which are the essential prime implicants of the following Boolean function? f(a, b, c) = a'c + ac' + b'c",a'c and ac',a'c and b'c,a'c only,ac' and bc',a
+"Consider a multiplexer with X and Y as data inputs and Z as control input. Z = 0 selects input X, and Z = 1 selects input Y. What are the connections required to realize the 2-variable Boolean function f = T + R, without using any additional hardware ?","R to X, 1 to Y, T to Z
+","T to X, R to Y, T to Z","T to X, R to Y, 0 to Z","R to X, 0 to Y, T to Z",a
+"A 4-bit carry lookahead adder, which adds two 4-bit numbers, is designed using AND, OR, NOT, NAND, NOR gates only. Assuming that all the inputs are available in both complemented and uncomplemented forms and the delay of each gate is one time unit, what is the overall propagation delay of the adder? Assume that the carry network has been implemented using two-level AND-OR logic.",4 time units,6 time units,10 time units,12 time units,a
+"Consider an array multiplier for multiplying two n bit numbers. If each gate in the circuit has a unit delay, the total delay of the multiplier is",?(1),?(log n),?(n),?(n2),c

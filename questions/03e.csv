@@ -1,2 +1,10 @@
-qn, opt1, opt2, opt3, opt4, anw
-what is qwe in 03 easy, ad,zxc,yhn,okm,zxc
+The decoded instruction is stored in ______,IR,PC,registers,MDR,a
+ Which registers can interact with the secondary storage?,MAR,PC,IR,R0,a
+ ISP stands for _________, Instruction Set Processor,Information Standard Processing, Interchange Standard Protocol, Interrupt Service Procedure,a
+The internal Components of the processor are connected by _______,Processor intra-connectivity circuitry, Processor bus, Memory bus,Rambus,b
+" The registers,ALU and the interconnection between them are collectively called as _____",process route,information trail, information path, data path,d
+ ______ are used to over come the difference in data transfer speeds of various devices.,Speed enhancing circuitory, Bridge circuits,Multiple Buses,Buffer registers,d
+To extend the connectivity of the processor bus we use ________,PCI bus,SCSI bus,Controllers,Multiple bus,a
+The bus used to connect the monitor to the CPU is ______, PCI bus,SCSI bus, Memory bus, Rambus,b
+" In multiple Bus organisation, the registers are collectively placed and referred as ______",Set registers,Register file,Register Block,Map registers,b
+The main advantage of multiple bus organisation over single bus is _____,Reduction in the number of cycles for execution,Increase in size of the registers,Better Connectivity, None of the mentioned,a

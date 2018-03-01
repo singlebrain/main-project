@@ -1,2 +1,30 @@
-qn, opt1, opt2, opt3, opt4, anw
-what is qwe in 04 medium , ad,zxc,yhn,okm,zxc
+Assume that the SLR parser for a grammar G has n1 states and the LALR parser for G has n2 states. The relationship between n1 and n2 is:,n1 is necessarily less than n2,n1 is necessarily equal to n2,n1 is necessarily greater than n2,none of these,b
+"In a bottom-up evaluation of a syntax directed definition, inherited attributes can",always be evaluated,be evaluated only if the definition is L-­attributed,be evaluated only if the definition has synthesized attributes,never be evaluated,b
+"Consider the grammar shown below S ? i E t S S' | a S' ? e S | ? E ? b In the predictive parse table. M, of this grammar, the entries M[S', e] and M[S', $] respectively are",{S' ? e S} and {S' ? e},{S' ? e S} and {},{S' ? ?} and {S' ? ?},"{S' ? e S, S'? ?} and {S' ? ?}",d
+"Consider the following translation scheme. S ? ER R ? *E{print(""*"");}R | ? E ? F + E {print(""+"");} | F F ? (S) | id {print(id.value);} Here id is a token that represents an integer and id.value represents the corresponding integer value. For an input '2 * 3 + 4', this translation scheme prints",2 * 3 + 4,2 * +3 4,2 3 * 4 +,2 3 4+*,d
+The grammar A ? AA | (A) | ? is not suitable for predictive-parsing because the grammar is,ambiguous,left-recursive,right-recursive,an operator-grammar,b
+"Consider the grammar with non-terminals N = {S,C,S1 },terminals T={a,b,i,t,e}, with S as the start symbol, and the following set of rules:
+S --> iCtSS1|a
+S1 --> eS|?
+C --> b
+The grammar is NOT LL(1) because:",it is left recursive,it is right recursive,it is ambiguous,It is not context-free,c
+"Consider the following two statements:
+P: Every regular grammar is LL(1)
+Q: Every regular set has a LR(1) grammar
+Which of the following is TRUE?", Both P and Q are true,P is true and Q is false,P is false and Q is true,Both P and Q are false,c
+"A canonical set of items is given below
+S --> L. > R
+Q --> R.
+On input symbol < the set has",a shift-reduce conflict and a reduce-reduce conflict,a shift-reduce conflict but not a reduce-reduce conflict,a reduce-reduce conflict but not a shift-reduce conflict.,neither a shift-reduce nor a reduce-reduce conflict,d
+"Consider the grammar defined by the following production rules, with two operators ? and +
+    S --> T * P 
+    T --> U | T * U
+    P --> Q + P | Q
+    Q --> Id
+    U --> Id
+Which one of the following is TRUE?","+ is left associative, while ? is right associative","+ is right associative, while ? is left associative",Both + and ? are right associative,Both + and ? are left associative,b
+"Consider the following grammar:
+S ? FR
+R ? S | ?
+F ? id
+In the predictive parser table, M, of the grammar the entries M[S, id] and M[R, $] respectively.",{S ? FR} and {R ? ? },{S ? FR} and { },{S ? FR} and {R ? *S},{F ? id} and {R ? ?},a

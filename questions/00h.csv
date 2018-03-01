@@ -1,2 +1,58 @@
-qn, opt1, opt2, opt3, opt4, anw
-what is qwe in 00 hard , ad,zxc,yhn,okm,zxc
+"The semaphore variables full, empty and mutex are initialized to 0, n and 1, respectively. Process P1 repeatedly adds one item at a time to a buffer of size n, and process P2 repeatedly removes one item at a time from the same buffer using the programs given below. In the programs, K, L, M and N are unspecified statements.  P1 while (1) {     K; P(mutex); Add an item to the buffer; V(mutex);     L; } P2 while (1) {    M; P(mutex); Remove an item from the buffer; V(mutex);     N; } The statements K, L, M and N are respectively ","P(full), V(empty), P(full), V(empty)","P(full), V(empty), P(empty), V(full)","P(empty), V(full), P(empty), V(full)","P(empty), V(full), P(empty), V(full)",d
+"Consider a non-negative counting semaphore S. The operation P(S) decrements S, and V(S) increments S. During an execution, 20 P(S) operations and 12 V(S) operations are issued in some order. The largest initial value of S for which at least one P(S) operation will remain blocked is ________.",7,8,9,10,a
+Which of the following actions is/are typically not performed by the operating system when switching context from process A to process B? a) Saving current register values and restoring saved register values for process B. b) Changing address translation tables. c) Swapping out the memory image of process A to the disk. d) Invalidating the translation look-aside buffer. ,c only,a and b,c and d,"a,c and d",c
+"The process of transferring data intended for a peripheral device into a disk (or intermediate store) so that it can be transferred to peripheral at a more convenient time or in bulk, is known as",spooling,caching,virtual programming,None of the above,a
+"What are characteristics of signature based IDS ?
+1.Most are based on simple pattern matching algorithms.
+11.It is programmed to interpret a certain series of packets
+111.It models the normal usage of network as a noise characterization
+1V.Anything distinct from the noise is assumed to be intrusion activity
+
+",I and III,II and III,"II, III and IV",I and II,d
+Applying the LRU page replacement to the following reference string : 1 2 4 5 2 1 2 4 The main memory can accommodate 3 pages and it already has pages 1 and 2. Page 1 came in before page 2. How many page faults will occur ?,2,3,4,5,c
+"All processes share a semaphore variable mutex, initialized to 1. Each process must execute wait(mutex) before entering the critical section and signal(mutex) afterward.
+Suppose a process executes in the following manner :
+
+signal(mutex);
+.....
+critical section
+.....
+wait(mutex);
+In this situation :",a deadlock will occur,processes will starve to enter critical section,several processes maybe executing in their critical section,all of the mentioned,c
+"All processes share a semaphore variable mutex, initialized to 1. Each process must execute wait(mutex) before entering the critical section and signal(mutex) afterward.
+Suppose a process executes in the following manner :
+
+wait(mutex);
+.....
+critical section
+.....
+wait(mutex);",a deadlock will occur,�processes will starve to enter critical section,several processes maybe executing in their critical section,all of the mentioned,a
+"Consider the methods used by processes P1 and P2 for accessing their critical sections whenever needed, as given below. The initial values of shared boolean variables S1 and S2 are randomly assigned. (GATE 2010)
+
+Method used by P1 :
+while(S1==S2);
+Critical section
+S1 = S2;
+ 
+Method used by P2 :
+while(S1!=S2);
+Critical section
+S2 = not(S1);
+Which of the following statements describes properties achieved ?",Mutual exclusion but not progress,Progress but not mutual exclusion,�Neither mutual exclusion nor progress,Both mutual exclusion and progress,d
+"A system has 12 magnetic tape drives and 3 processes : P0, P1, and P2. Process P0 requires 10 tape drives, P1 requires 4 and P2 requires 9 tape drives.
+
+Process    
+P0            
+P1                             
+P2                             
+ 
+Maximum needs (process-wise : P0 through P2 top to bottom)    
+10             
+4   
+9
+ 
+Currently allocated (process-wise)
+5
+2
+2
+Which of the following sequence is a safe sequence ?","P0, P1, P2","�P1, P2, P0","�P2, P0, P1","P1, P0, P2",d

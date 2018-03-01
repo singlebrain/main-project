@@ -1,2 +1,22 @@
-qn, opt1, opt2, opt3, opt4, anw
-what is qwe in 06 easy, ad,zxc,yhn,okm,zxc
+What is recurrence for worst case of QuickSort and what is the time complexity in Worst case?,Recurrence is T(n) = T(n-2) + O(n) and time complexity is O(n^2),Recurrence is T(n) = T(n-1) + O(n) and time complexity is O(n^2),Recurrence is T(n) = 2T(n/2) + O(n) and time complexity is O(nLogn),Recurrence is T(n) = T(n/10) + T(9n/10) + O(n) and time complexity is O(nLogn),b
+"Suppose we have a O(n) time algorithm that finds median of an unsorted array. Now consider a QuickSort implementation where we first find median using the above algorithm, then use median as pivot. What will be the worst case time complexity of this modified QuickSort.",O(n^2 Logn),O(n^2),O(n Logn Logn),O(nLogn),d
+Given an unsorted array. The array has this property that every element in array is at most k distance from its position in sorted array where k is a positive integer smaller than size of array. Which sorting algorithm can be easily modified for sorting this array and what is the obtainable time complexity?,Insertion Sort with time complexity O(kn),Heap Sort with time complexity O(nLogk),Quick Sort with time complexity O(kLogk),Merge Sort with time complexity O(kLogk),b
+Which of the following is not true about comparison based sorting algorithms?, The minimum possible time complexity of a comparison based sorting algorithm is O(nLogn) for a random input array,Any comparison based sorting algorithm can be made stable by using position as a criteria when two elements are compared,Counting Sort is not a comparison based sorting algortihm,Heap Sort is not a comparison based sorting algorithm,d
+"What is time complexity of fun()?
+int fun(int n)
+{
+  int count = 0;
+  for (int i = n; i > 0; i /= 2)
+     for (int j = 0; j < i; j++)
+        count += 1;
+  return count;
+}",O(n^2,O(n^2,O(n),O(nLognLogn),c
+The recurrence relation capturing the optimal time of the Tower of Hanoi problem with n discs is.,T(n) = 2T(n – 2) + 2,T(n) = 2T(n – 1) + n,T(n) = 2T(n/2) + 1,T(n) = 2T(n – 1) + 1,d
+Which of the following is not O(n^2)?,(15^10) * n + 12099,n^1.98,n^3 / (sqrt(n)),(2^20) * n,c
+"Which of the given options provides the increasing order of asymptotic complexity of functions f1, f2, f3 and f4?
+  f1(n) = 2^n
+  f2(n) = n^(3/2)
+  f3(n) = nLogn
+  f4(n) = n^(Logn)","f3, f2, f4, f1","f3, f2, f1, f4","f2, f3, f1, f4","f2, f3, f4, f1",a
+Consider the Quicksort algorithm. Suppose there is a procedure for finding a pivot element which splits the list into two sub-lists each of which contains at least one-fifth of the elements. Let T(n) be the number of comparisons required to sort n elements. Then,T(n) <= 2T(n/5) + n,T(n) <= T(n/5) + T(4n/5) + n,T(n) <= 2T(4n/5) + n,T(n) <= 2T(n/2) + n,b
+Which of the following sorting algorithms has the lowest worst-case complexity?,Merge Sort,Bubble Sort,Quick Sort,Selection sort,a

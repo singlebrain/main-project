@@ -1,2 +1,72 @@
-qn, opt1, opt2, opt3, opt4, anw
-what is qwe in 07 hard , ad,zxc,yhn,okm,zxc
+"Consider the following left-rotate and right-rotate functions commonly used in self-adjusting BSTs
+T1, T2 and T3 are subtrees of the tree rooted with y (on left side) 
+or x (on right side)           
+                y                               x
+               / \     Right Rotation          /  \
+              x   T3   – - – - – - – >        T1   y 
+             / \       < - - - - - - -            / \
+            T1  T2     Left Rotation            T2  T3
+Which of the following is tightest upper bound for left-rotate and right-rotate operations.", O(1) ,O(Logn),O(LogLogn), O(n),a
+"A program takes as input a balanced binary search tree with n leaf nodes and computes the value of a function g(x) for each node x. If the cost of computing g(x) is min{no. of leaf-nodes in left-subtree of x, no. of leaf-nodes in right-subtree of x} then the worst-case time complexity of the program is
+",?(n),?(nLogn),?(n2),?(n2log n),b
+"Consider a hash table of size seven, with starting index zero, and a hash function (3x + 4)mod7. Assuming the hash table is initially empty, which of the following is the contents of the table when the sequence 1, 3, 8, 10 is inserted into the table using closed hashing? Note that ‘_’ denotes an empty location in the table.","8, _, _, _, _, _, 10"," 1, 8, 10, _, _, _, 3","1, _, _, _, _, _,3"," 1, 10, 8, _, _, _, 3",b
+"Let A be a square matrix of size n x n. Consider the following program. What is the expected output?
+C = 100
+for i = 1 to n do
+    for j = 1 to n do
+    {
+        Temp = A[i][j] + C
+        A[i][j] = A[j][i]
+        A[j][i] = Temp - C
+    } 
+for i = 1 to n do
+    for j = 1 to n do
+        Output(A[i][j]);",The matrix A itself,Transpose of matrix A,Adding 100 to the upper diagonal elements and subtracting 100 from diagonal elements of A, None of the above,a
+"A Young tableau is a 2D array of integers increasing from left to right and from top to bottom. Any unfilled entries are marked with ?, and hence there cannot be any entry to the right of, or below a ?. The following Young tableau consists of unique entries.
+1     2     5      14
+3     4     6      23       
+10    12    18     25  
+31    ?     ?       ? 
+When an element is removed from a Young tableau, other elements should be moved into its place so that the resulting table is still a Young tableau (unfilled entries may be filled in with a ?). The minimum number of entries (other than 1) to be shifted, to remove 1 from the given Young tableau is ____________",2,5,6,18,b
+"Consider B+ tree in which the search key is 12 bytes long, block size is 1024 bytes, record pointer is 10 bytes long and block pointer is 8 bytes long. The maximum number of keys that can be accommodated in each non-leaf node of the tree is",49,50,51,52,b
+"A 3-ary max heap is like a binary max heap, but instead of 2 children, nodes have 3 children. A 3-ary heap can be represented by an array as follows: The root is stored in the first location, a[0], nodes in the next level, from left to right, is stored from a[1] to a[3]. The nodes from the second level of the tree from left to right are stored from a[4] location onward. An item x can be inserted into a 3-ary heap containing n items by placing x in the location a[n] and pushing it up the tree to satisfy the heap property. Which one of the following is a valid sequence of elements in an array representing 3-ary max heap?","1, 3, 5, 6, 8, 9","9, 6, 3, 1, 8, 5","9, 3, 6, 8, 5, 1","9, 5, 6, 8, 3, 1",d
+"Consider a max heap, represented by the array: 40, 30, 20, 10, 15, 16, 17, 8, 4. Now consider that a value 35 is inserted into this heap. After insertion, the new heap is","40, 30, 20, 10, 15, 16, 17, 8, 4, 35","40, 35, 20, 10, 30, 16, 17, 8, 4, 15","40, 30, 20, 10, 35, 16, 17, 8, 4, 15","40, 35, 20, 10, 15, 16, 17, 8, 4, 30",b
+"Following function is supposed to calculate the maximum depth or height of a Binary tree -- the number of nodes along the longest path from the root node down to the farthest leaf node.
+int maxDepth(struct node* node)
+{
+   if (node==NULL)
+       return 0;
+   else
+   {
+       /* compute the depth of each subtree */
+       int lDepth = maxDepth(node->left);
+       int rDepth = maxDepth(node->right);
+ 
+       /* use the larger one */
+       if (lDepth > rDepth)
+           return X;
+       else return Y;
+   }
+}
+What should be the values of X and Y so that the function works correctly?","X = lDepth, Y = rDepth","X = lDepth + 1, Y = rDepth + 1","X = lDepth - 1, Y = rDepth -1",None of the above,b
+"Consider the pseudocode given below. The function DoSomething() takes as argument a pointer to the root of an arbitrary tree represented by the leftMostChild-rightSibling representation. Each node of the tree is of type treeNode.
+typedef struct treeNode* treeptr;
+struct treeNode
+{
+    treeptr leftMostChild, rightSibling;
+};
+int DoSomething (treeptr tree)
+{
+    int value=0;
+    if (tree != NULL)
+    {
+        if (tree->leftMostChild == NULL)
+            value = 1;
+        else
+            value = DoSomething(tree->leftMostChild);
+        value = value + DoSomething(tree->rightSibling);
+    }
+    return(value);
+}
+
+When the pointer to the root of a tree is passed as the argument to DoSomething, the value returned by the function corresponds to the",number of internal nodes in the tree,height of the tree., number of nodes without a right sibling in the tree,number of leaf nodes in the tree,d

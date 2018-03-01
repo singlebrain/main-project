@@ -1,2 +1,40 @@
-qn, opt1, opt2, opt3, opt4, anw
-what is qwe in 03 hard , ad,zxc,yhn,okm,zxc
+"Consider a main memory system that consists of 8 memory modules attached to the system bus, which is one word wide. When a write request is made, the bus is occupied for 100 nanoseconds (ns) by the data, address, and control signals. During the same 100 ns, and for 500 ns thereafter, the addressed memory module executes one cycle accepting and storing the data. The (internal) operation of different memory modules may overlap in time, but only one request can be on the bus at any time. The maximum number of stores (of one word each) that can be initiated in 1 millisecond is ____________",1000,10000,100000,100,b
+"Consider the following processors (ns stands for nanoseconds). Assume that the pipeline registers have zero latency.
+P1: Four-stage pipeline with stage 
+    latencies 1 ns, 2 ns, 2 ns, 1 ns.
+P2: Four-stage pipeline with stage 
+    latencies 1 ns, 1.5 ns, 1.5 ns, 1.5 ns.
+P3: Five-stage pipeline with stage 
+    latencies 0.5 ns, 1 ns, 1 ns, 0.6 ns, 1 ns.
+P4: Five-stage pipeline with stage 
+    latencies 0.5 ns, 0.5 ns, 1 ns, 1 ns, 1.1 ns. 
+Which processor has the highest peak clock frequency?",p1,p2,p3,p4,c
+"An instruction pipeline has five stages, namely, instruction fetch (IF), instruction decode and register fetch (ID/RF), instruction execution (EX), memory access (MEM), and register writeback (WB) with stage latencies 1 ns, 2.2 ns, 2 ns, 1 ns, and 0.75 ns, respectively (ns stands for nanoseconds). To gain in terms of frequency, the designers have decided to split the ID/RF stage into three stages (ID, RF1, RF2) each of latency 2.2/3 ns. Also, the EX stage is split into two stages (EX1, EX2) each of latency 1 ns. The new design has a total of eight pipeline stages. A program has 20% branch instructions which execute in the EX stage and produce the next instruction pointer at the end of the EX stage in the old design and at the end of the EX2 stage in the new design. The IF stage stalls after fetching a branch instruction until the next instruction pointer is computed. All instructions other than the branch instruction have an average CPI of one in both the designs. The execution times of this program on the old and the new design are P and Q nanoseconds, respectively. The value of P/Q is __________.",1.5,1.4,1.8,2.5,a
+"A CPU has a cache with block size 64 bytes. The main memory has k banks, each bank being c bytes wide. Consecutive c ? byte chunks are mapped on consecutive banks with wrap-around. All the k banks can be accessed in parallel, but two accesses to the same bank must be serialized. A cache block access may involve multiple iterations of parallel bank accesses depending on the amount of data obtained by accessing all the k banks in parallel. Each iteration requires decoding the bank numbers to be accessed in parallel and this takes. k/2 ns The latency of one bank access is 80 ns. If c = 2 and k = 24, the latency of retrieving a cache block starting at address zero from main memory is:",92 ns,104 ns,172 ns,184 ns,d
+"A CPU has a five-stage pipeline and runs at 1 GHz frequency. Instruction fetch happens in the first stage of the pipeline. A conditional branch instruction computes the target address and evaluates the condition in the third stage of the pipeline. The processor stops fetching new instructions following a conditional branch until the branch outcome is known. A program executes 109 instructions out of which 20% are conditional branches. If each instruction takes one cycle to complete on average, the total execution time of the program is:",1.0 sec,1.2 sec,1.4 sec,1.6 sec,c
+Consider two cache organizations: The first one is 32 KB 2-way set associative with 32-byte block size. The second one is of the same size but direct mapped. The size of an address is 32 bits in both cases. A 2-to-1 multiplexer has a latency of 0.6 ns while a kbit comparator has a latency of k/10 ns. The hit latency of the set associative organization is h1 while that of the direct mapped one is h2. The value of h1 is:,2.3 ns,2.4 ns,1.8ns,1.7 ns,b
+"Consider the following code sequence having five instructions I1 to I5. Each of these instructions has the following format.
+    OP Ri, Rj, Rk 
+where operation OP is performed on contents of registers Rj and Rk and the result is stored in register Ri.
+   I1 : ADD R1, R2, R3
+   I2 : MUL R7, R1, R3
+   I3 : SUB R4, R1, R5
+   I4 : ADD R3, R2, R4
+   I5 : MUL R7, R8, R9 
+Consider the following three statements:
+S1: There is an anti-dependence between instructions I2 and I5.
+S2: There is an anti-dependence between instructions I2 and I4.
+S3: Within an instruction pipeline an anti-dependence always 
+    creates one or more stalls. 
+Which one of above statements is/are correct?",Only S1 is true,Only S2 is true,Only S1 and S2 are true,Only S2 and S3 are true,b
+"Consider the following reservation table for a pipeline having three stages S1, S2 and S3.
+     Time -->
+-----------------------------
+      1    2   3    4     5
+-----------------------------
+S1  | X  |   |   |    |  X |    
+S2  |    | X |   | X  |    |
+S3  |    |   | X |    |    |
+The minimum average latency (MAL) is __________",3,2,1,4,a
+"A CPU has only three instructions I1, I2 and I3, which use the following signals in time steps T1-T5: I1 : T1 : Ain, Bout, Cin T2 : PCout, Bin T3 : Zout, Ain T4 : Bin, Cout T5 : End I2 : T1 : Cin, Bout, Din T2 : Aout, Bin T3 : Zout, Ain T4 : Bin, Cout T5 : End I3 : T1 : Din, Aout T2 : Ain, Bout T3 : Zout, Ain T4 : Dout, Ain T5 : End Which of the following logic functions will generate the hardwired control for the signal Ain ?",T1.I1 + T2.I3 + T4.I3 + T3, (T1 + T2 + T3).I3 + T1.I1,(T1 + T2 ).I1 + (T2 + T4).I3 + T3,(T1 + T2 ).I2 + (T1 + T3).I1 + T3,a
+"Assume that EA = (X)+ is the effective address equal to the contents of location X, with X incremented by one word length after the effective address is calculated; EA = ?(X) is the effective address equal to the contents of location X, with X decremented by one word length before the effective address is calculated; EA = (X)? is the effective address equal to the contents of location X, with X decremented by one word length after the effective address is calculated. The format of the instruction is (opcode, source, destination), which means (destination ? source op destination). Using X as a stack pointer, which of the following instructions can pop the top two elements from the stack, perform the addition operation and push the result back to the stack.","ADD (X)?, (X)","ADD (X), (X)?","ADD ?(X), (X)+","ADD ?(X), (X)+",a

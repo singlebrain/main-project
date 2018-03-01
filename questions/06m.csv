@@ -1,2 +1,57 @@
-qn, opt1, opt2, opt3, opt4, anw
-what is qwe in 06 medium , ad,zxc,yhn,okm,zxc
+"Consider the following C-function:
+double foo (int n)
+{
+    int i;
+    double sum;
+    if (n = = 0) return 1.0;
+    else
+    {
+        sum = 0.0;
+        for (i = 0; i < n; i++)
+            sum += foo (i);
+        return sum;
+    }
+}
+Suppose we modify the above function foo() and store the values of foo (i), 0 < = i < n, as and when they are computed. With this modification, the time complexity for function foo() is significantly reduced. The space complexity of the modified function would be:",O(1),O(n),O(n!),O(nn),b
+Two matrices M1 and M2 are to be stored in arrays A and B respectively. Each array can be stored either in row-major or column-major order in contiguous memory locations. The time complexity of an algorithm to compute M1 × M2 will be,"best if A is in row-major, and B is in column- major order",best if both are in row-major order,best if both are in column-major order,independent of the storage scheme,d
+"Let A[1, ..., n] be an array storing a bit (1 or 0) at each location, and f(m) is a unction whose time complexity is ?(m). Consider the following program fragment written in a C like language:
+counter = 0;
+for (i = 1; i < = n; i++)
+{ 
+      if (A[i] == 1) 
+         counter++;
+      else {
+         f(counter); 
+         counter = 0;
+      }
+}
+The complexity of this program fragment is",?(n2),?(nlog n) and O(n2),?(n),O(n),c
+"The recurrence equation
+T(1) = 1
+T(n) = 2T(n - 1) + n, n ? 2 
+evaluates to",2n + 1- n - 2,2n - n,2n + 1 - 2n - 2,2n - n,a
+"Consider the following three claims
+1. (n + k)m = ?(nm), where k and m are constants
+2. 2n + 1 = O(2n)
+3. 22n + 1 = O(2n) 
+Which of these claims are correct ?",1 and 2,1 and 3,2 and 3,"1,2 and 3",a
+"In a permutation a1.....an of n distinct integers, an inversion is a pair (ai, aj) such that i < j and ai > aj. What would be the worst case time complexity of the Insertion Sort algorithm, if the inputs are restricted to permutations of 1.....n with at most n inversions?",? (n2),? (n log n),? (n1.5),? (n),d
+Randomized quicksort is an extension of quicksort where the pivot is chosen randomly. What is the worst case complexity of sorting n numbers using randomized quicksort?,O(n),"O(n Log n)
+",O(n2),O(n!),c
+"Which one of the following is the recurrence equation for the worst case time complexity of the Quicksort algorithm for sorting n(? 2) numbers? In the recurrence equations given in the options below, c is a constant.",T(n) = 2T (n/2) + cn,T(n) = T(n – 1) + T(0) + cn,T(n) = 2T (n – 2) + cn,T(n) = T(n/2) + cn,b
+"Consider the following C function.
+int fun1 (int n)
+{
+   int i, j, k, p, q = 0;
+   for (i = 1; i<n; ++i)
+   {
+      p = 0;
+      for (j=n; j>1; j=j/2)
+         ++p;
+      for (k=1; k<p; k=k*2)
+         ++q;
+   }
+   return q;
+}
+Which one of the following most closely approximates the return value of the function fun1?",n3,n (logn)2,nlogn,nlog(logn),d
+An unordered list contains n distinct elements. The number of comparisons to find an element in this list that is neither maximum nor minimum is,?(nlogn),?(n),?(logn),?(1),d

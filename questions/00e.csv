@@ -1,2 +1,10 @@
-qn, opt1, opt2, opt3, opt4,a
-which of the folowing sheduling algorithm is non preemptive,round robin,first in first out,multi level queue,priority first in first outheduling,b
+What is operating system?,collection of programs that manages hardware resources,system service provider to the application programs,link to interface the hardware and application programs,all of the mentioned,c
+"To access the services of operating system, the interface is provided by the",System calls,API,Library,Assembly instructions,a
+Which one of the following is not true?,kernel is the program that constitutes the central core of the operating system,kernel is the first part of operating system to load into memory during booting,kernel is made of various modules which can not be loaded in running operating system,kernel remains in the memory during the entire computer session,c
+Which scheduling policy is most suitable for a time-shared operating systems?,Shortest Job First ,Round Robin,First Come First Server    ,Elevator,b
+Which of the following scheduling algorithms is non-preemptive?,Round-Robin ,First In First Out,Multilevel Queue Scheduling  ,Multilevel Queue Scheduling  ,b
+Which system call returns the process identifier of a terminated child?,wait,exit,fork,get,a
+What is the drawback of banker’s algorithm?,in advance processes rarely know that how much resource they will need,the number of processes changes as time progresses,resource once available can disappear,all of the mentioned,d
+The jacketing technique is used to,convert a blocking system call into nonblocking system call,create a new thread,communicate between threads,terminate a thread,a
+The register context and stacks of a thread are deallocated when the thread,terminates,blocks,unblocks,spawns,a
+Thread synchronization is required because,all threads of a process share the same address space,all threads of a process share the same global variables,all threads of a process can share the same files,all of the mentioned,d

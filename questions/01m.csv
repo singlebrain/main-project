@@ -1,2 +1,19 @@
-qn, opt1, opt2, opt3, opt4, anw
-what is qwe in 01 medium , ad,zxc,yhn,okm,zxc
+"A polynomial p(x) satisfies the following:
+p(1) = p(3) = p(5) = 1 
+p(2) = p(4) = -1 
+The minimum degree of such a polynomial is",1,2,3,4,d
+Consider a function f(x) = 1 – |x| on –1 ? x ? 1. The value of x at which the function attains a maximum and the maximum value of the function are:,"0, –1","–1, 0","0, 1","–1, 2",c
+"Let f(x) = x –(1/3) and A denote the area of the region bounded by f(x) and the X-axis, when x varies from –1 to 1. Which of the following statements is/are True?
+1. f is continuous in [–1, 1]
+2. f is not bounded in [–1, 1]
+3. A is nonzero and finite ",2 only,3 only,2 and 3 only," 1, 2 and 3",c
+"The velocity v (in kilometer/minute) of a motorbike which starts from rest, is given at fixed intervals of time t(in minutes) as follows:
+t   2  4  6  8  10  12  14  16 18 20
+v  10  18 25 29 32  20  11  5  2  0 
+The approximate distance (in kilometers) rounded to two places of decimals covered in 20 minutes using Simpson’s 1/3rd rule is _________.",309.33,105.33,110,405.6,a
+"Let X and Y be two exponentially distributed and independent random variables with mean ? and ?, respectively. If Z = min(X,Y), then the mean of Z is given by",1/?+?,"min(? ,?)",? ?/? + ?,? + ?,c
+How many onto (or surjective) functions are there from an n-element (n >= 2) set to a 2-element set?,2n,2n - 1,2n - 2,2(2n - 2),c
+"The number of different n × n symmetric matrices with each element being either 0 or 1 is: (Note: power(2, x) is same as 2x)","power(2, n)","power(2, n2)","power(2, (n2 + n)/2)","power(2, (n2 - n)/2)",c
+"Mala has a colouring book in which each English letter is drawn two times. She wants to paint each of these 52 prints with one of k colours, such that the colour-pairs used to colour any two letters are different. Both prints of a letter can also be coloured with the same colour. What is the minimum value of k that satisfies this requirement ?",9,8,7,6,c
+"Let A be a sequence of 8 distinct integers sorted in ascending order. How many distinct pairs of sequences, B and C are there such that (i) each is sorted in ascending order, (ii) B has 5 and C has 3 elements, and (iii) the result of merging B and C gives A?",2,30,56,256,c
+"The number of 4 digit numbers having their digits in non-decreasing order (from left to right) constructed by using the digits belonging to the set {1, 2, 3} is ____.",12,13,14,15,d

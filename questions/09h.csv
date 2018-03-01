@@ -1,2 +1,74 @@
-qn, opt1, opt2, opt3, opt4, anw
-what is qwe in 09 hard , ad,zxc,yhn,okm,zxc
+" Given relations r(w, x) and s(y, z), the result of select distinct w, x from r, s is guaranteed to be same as r, provided", r has no duplicates and s is non-empty, r and s have no duplicates,s has no duplicates and r is non-empty,s has no duplicates and r is non-empty,a
+"Consider a schema R(A, B, C, D) and functional dependencies A -> B and C -> D. Then the decomposition of R into R1 (A, B) and R2(C, D) is ",dependency preserving and loss less join,loss less join but not dependency preserving,dependency preserving but not loss less join,not dependency preserving and not loss less join,c
+"There are 5 records in a database.
+
+Name     Age    Occupation    Category
+Rama     27       CON            A
+Abdul    22       ENG            A
+Jeniffer 28       DOC            B
+Maya     32       SER            D
+Dev      24       MUS            C
+There is an index file associated with this and it contain the values 1, 3, 2, 5 and 4. Which one of the fields is the index built form?",age,name,occupation,category,c
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+" A database table T1 has 2000 records and occupies 80 disk blocks. Another table T2 has 400 records and occupies 20 disk blocks. These two tables have to be joined as per a specified join condition that needs to be evaluated for every pair of records from these two tables. The memory buffer space available can hold exactly one block of records for T1 and one block of records for T2 simultaneously at any point in time. No index is available on either table. If Nested-loop join algorithm is employed to perform the join, with the most appropriate choice of table to be used in outer loop, the number of block accesses required for reading the data are  ",800000,40080,32020,100,c
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+" A database table T1 has 2000 records and occupies 80 disk blocks. Another table T2 has 400 records and occupies 20 disk blocks. These two tables have to be joined as per a specified join condition that needs to be evaluated for every pair of records from these two tables. The memory buffer space available can hold exactly one block of records for T1 and one block of records for T2 simultaneously at any point in time. No index is available on either table. If, instead of Nested-loop join, Block nested-loop join is used, again with the most appropriate choice of table in the outer loop, the reduction in number of block accesses required for reading the data will be  ",0,30400,38400,798400,b
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+"Suppose (A, B) and (C,D) are two relation schemas. Let r1 and r2 be the corresponding relation instances. B is a foreign key that refers to C in r2. If data in r1 and r2 satisfy referential integrity constraints, which of the following is ALWAYS TRUE?
+DBMSGATE2012",a,b,c,d,a
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+"Which of the following query transformations (i.e., replacing the l.h.s. expression by the r.h.s. expression) is incorrect? R1 and R2 are relations. C1, C2 are selection conditions and A1, A2 are attributes of R1. a.  ?C1( ?C2R1)) ? ?C2(?C1(R1)) b.  ?C1( ?A1R1)) ? ?A1(?C1(R1)) c.  ?C1( R1 ? R2 ) ? ?C1(R1) ? ?C1(R2) d.  ?A1(?C1(R1)) ? ?C1 (?A1 (R1))",a,b,c,d,d
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+"In an Entity-Relationship (ER) model, suppose R is a many-to-one relationship from entity set E1 to entity set E2. Assume that E1 and E2 participate totally in R and that the cardinality of E1 is greater that the cardinality of E2. Which one of the following is true about R?",Every entity in E1 is associated with exactly one entity in E2,Some entity in E1 is associated with more than one entity in E2,Every entity in E2 is associated with exactly one entity in E1,Every entity in E2 is associated with at most one entity in E1,a
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+"Consider a join (relation algebra) between relations r(R)and s(S) using the nested loop method. There are 3 buffers each of size equal to disk block size, out of which one buffer is reserved for intermediate results. Assuming size(r(R)) < size(s(S)), the join will have fewer number of disk block accesses if",relation r(R) is in the outer loop,relation s(S) is in the outer loop,join selection factor between r(R) and s(S) is more than 0.5,join selection factor between r(R) and s(S) is less than 0.5,a
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+"Consider the join of a relation R with a relation S. If K has m tuples and S has n tuples, then the maximum and minimum sizes of the join respectively are:", m+n and 0,mn and 0,m+n and m-n,mn and m+n,b

@@ -1,2 +1,10 @@
-qn, opt1, opt2, opt3, opt4, anw
-what is qwe in 09 easy, ad,zxc,yhn,okm,zxc
+Which normal form is considered adequate for normal relational database design?,2NF,5NF,4NF,3NF,D
+One of the following is a valid record based data base,object oriented model,relational model,entity relationship model,none of the above,B
+Value that appears in one relation for a given set of attributes also appears for a certain set of attributes in another relation.,Logical Integrity,Referential Integrity,Domain Integrity,Data Integrity,B
+Which of the following is true ?,A relation in BCNF is always in 3NF,A relation in 3NF is always in BCNF,BCNF and 3NF are same,A relation in BCNF is not in 3NF,A
+Which level of Abstraction describes how data are stored in the data base ?,Physical level,View level,Abstraction level,Logical level,A
+Third normal form is based on the concept of,Closure Dependency,Transitive Dependency,Normal Dependency,Functional Dependency,B
+Referential integrity is directly related to,Relation key,Foreign key,Primary key,Candidate key,B
+What is Granularity ?,The size of database,The size of data item,The size of record,The size of file,B
+Which of the following is not a type of Database Management System ?,Hierarchical,Network,Relational,Sequential,D
+Manager&rsquos salary details are to be hidden from Employee Table. This Technique is called as,Conceptual level Datahiding,Physical level Datahiding,External level Datahiding,Logical level Datahiding,C

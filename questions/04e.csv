@@ -1,2 +1,12 @@
-qn, opt1, opt2, opt3, opt4, anw
-what is qwe in 04 easy, ad,zxc,yhn,okm,zxc
+"The number of tokens in the following C statement is (GATE 2000)
+printf(""i = %d, &i = %x"", i, &i);",3,26,10,21,c
+"In a compiler, keywords of a language are recognized during",parsing of the program, the code generation,the lexical analysis of the program,dataflow analysis,c
+The lexical analysis for a modern computer language such as Java needs the power of which one of the following machine models in a necessary and sufficient sense?,Finite state automata,Deterministic pushdown automata,Non-Deterministic pushdown automata,Turing Machin,a
+Which one of the following statements is FALSE?,Context-free grammar can be used to specify both lexical and syntax rules.,Type checking is done before parsing,High-level language programs can be translated to different Intermediate Representations.,Arguments to a function can be passed using the program stack.,b
+"What is the maximum number of reduce moves that can be taken by a bottom-up parser for a grammar with no epsilon- and unit-production (i.e., of type A -> ? and A -> a) to parse a string with n tokens?",n/2,n-1,2n-1,2n,b
+The grammar S ? aSa | bS | c is,LL(1) but not LR(1),LR(1)but not LR(1),Both LL(1)and LR(1),Neither LL(1)nor LR(1),c
+Which of the following describes a handle (as applicable to LR-parsing) appropriately?,It is the position in a sentential form where the next shift or reduce operation will occur,It is non-terminal whose production will be used for reduction in the next step,It is a production that may be used for reduction in a future step along with a position in the sentential form where the next shift or reduce operation will occur,It is the production p that will be used for reduction in the next step along with a position in the sentential form where the right hand side of the production may be found,d
+An LALR(1) parser for a grammar G can have shift-reduce (S-R) conflicts if and only if,the SLR(1) parser for G has S-R conflicts,the LR(1) parser for G has S-R conflicts,the LR(0) parser for G has S-R conflicts,the LALR(1) parser for G has reduce-reduce conflicts,b
+Which one of the following is a top-down parser?,Recursive descent parser,Operator precedence parser,An LR(k) parser,An LALR(k) parser,a
+Which of the following suffices to convert an arbitrary CFG to an LL(1) grammar?,Removing left recursion alone,Factoring the grammar alone,"Removing left recursion and factoring the grammar
+",None of these,d

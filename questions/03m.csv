@@ -1,2 +1,27 @@
-qn, opt1, opt2, opt3, opt4, anw
-what is qwe in 03 medium , ad,zxc,yhn,okm,zxc
+"In a k-way set associative cache, the cache is divided into v sets, each of which consists of k lines. The lines of a set are placed in sequence one after another. The lines in set s are sequenced before the lines in set (s+1). The main memory blocks are numbered 0 onwards. The main memory block numbered j must be mapped to any one of the cache lines from.",(j mod v) * k to (j mod v) * k + (k-1),(j mod v) to (j mod v) + (k-1),(j mod k) to (j mod k) + (v-1),(j mod k) * v to (j mod k) * v + (v-1),a
+"Consider the following sequence of micro-operations.
+     MBR ? PC 
+     MAR ? X  
+     PC ? Y  
+     Memory ? MBR
+Which one of the following is a possible operation performed by this sequence?",Instruction fetch,Operand fetch,Conditional branch,Initiation of interrupt service,d
+"Consider an instruction pipeline with five stages without any branch prediction: Fetch Instruction (FI), Decode Instruction (DI), Fetch Operand (FO), Execute Instruction (EI) and Write Operand (WO). The stage delays for FI, DI, FO, EI and WO are 5 ns, 7 ns, 10 ns, 8 ns and 6 ns, respectively. There are intermediate storage buffers after each stage and the delay of each buffer is 1 ns. A program consisting of 12 instructions I1, I2, I3, …, I12 is executed in this pipelined processor. Instruction I4 is the only branch instruction and its branch target is I9. If the branch is taken during the execution of this program, the time (in ns) needed to complete the program is",132,165,176,328,b
+A RAM chip has a capacity of 1024 words of 8 bits each (1K × 8). The number of 2 × 4 decoders with enable line needed to construct a 16K × 16 RAM from 1K × 8 RAM is,4,5,6,7,b
+"The following code segment is executed on a processor which allows only register operands in its instructions. Each instruction can have atmost two source operands and one destination operand. Assume that all variables are dead after this code segment.
+   c = a + b;
+   d = c * a;
+   e = c + a;
+   x = c * c;
+   if (x > a) {
+      y = a * a;
+   }
+   else {
+     d = d * d;
+     e = e * e;
+  }
+Suppose the instruction set architecture of the processor has only two registers. The only allowed compiler optimization is code motion, which moves statements from one place to another while preserving correctness. What is the minimum number of spills to memory in the compiled code?",0,1,2,3,b
+Consider the same data as above question. What is the minimum number of registers needed in the instruction set architecture of the processor to compile this code segment without any spill to memory? Do not apply any optimization other than optimizing register allocation.,3,4,5,6,b
+"A computer has a 256 KByte, 4-way set associative, write back data cache with block size of 32 Bytes. The processor sends 32 bit addresses to the cache controller. Each cache tag directory entry contains, in addition to address tag, 2 valid bits, 1 modified bit and 1 replacement bit. The number of bits in the tag field of an address is",11,14,16,27,c
+A 4-way set-associative cache memory unit with a capacity of 16 KB is built using a block size of 8 words. The word length is 32 bits. The size of the physical address space is 4 GB. The number of bits for the TAG field is _____,5,15,20,25,C
+"Consider a 6-stage instruction pipeline, where all stages are perfectly balanced.Assume that there is no cycle-time overhead of pipelining. When an application is executing on this 6-stage pipeline, the speedup achieved with respect to non-pipelined execution if 25% of the instructions incur 2 pipeline stall cycles is",4,8,6,7,a
+"In designing a computer’s cache system, the cache block (or cache line) size is an important parameter. Which one of the following statements is correct in this context?",A smaller block size implies better spatial locality,A smaller block size implies a smaller cache tag and hence lower cache tag overhead,A smaller block size implies a larger cache tag and hence lower cache hit time,A smaller block size incurs a lower cache miss penalty,d

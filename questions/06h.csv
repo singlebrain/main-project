@@ -1,2 +1,47 @@
-qn, opt1, opt2, opt3, opt4, anw
-what is qwe in 06 hard , ad,zxc,yhn,okm,zxc
+"In the following table, the left column contains the names of standard graph algorithms and the right column contains the time complexities of the algorithms. Match each algorithm with its time complexity.
+ 1. Bellman-Ford algorithm 2. Kruskal’s algorithm 3. Floyd-Warshall algorithm 4. Topological sorting  A : O ( m log n) B : O (n3) C : O (nm) D : O (n + m)","1? C, 2 ? A, 3 ? B, 4 ? D","1? B, 2 ? D, 3 ? C, 4 ? A","1? C, 2 ? D, 3 ? A, 4 ? B","1? B, 2 ? A, 3 ? C, 4 ? D",a
+"Assume that the algorithms considered here sort the input sequences in ascending order. If the input is already in ascending order, which of the following are TRUE ?
+I.   Quicksort runs in ?(n2) time
+II.  Bubblesort runs in ?(n2) time
+III. Mergesort runs in  ?(n) time
+IV.  Insertion sort runs in  ?(n) time ",I and II only,I and III only,II and IV only,I and IV only,d
+"The characters a to h have the set of frequencies based on the first 8 Fibonacci numbers as follows
+a : 1, b : 1, c : 2, d : 3, e : 5, f : 8, g : 13, h : 21/
+A Huffman code is used to represent the characters. What is the sequence of characters corresponding to the following code? 110111100111010",fdheg,ecgdf,dchfg,fehdg,a
+"The two numbers given below are multiplied using the Booth's algorithm.
+Multiplicand : 0101 1010 1110 1110
+Multiplier: 0111 0111 1011 1101
+How many additions/Subtractions are required for the multiplication of the above two numbers?",6,8,10,12,b
+"The minimum number of record movements required to merge five files A (with 10 records), B (with 20 records), C (with 15 records), D (with 5 records) and E (with 25 records) is:",165,90,75,65,a
+"If T1 = O(1), give the correct matching for the following pairs:
+ 
+(M) Tn=Tn?1+n           (U) Tn=O(n)
+(N) Tn=Tn/2 +n          (V) Tn=O(nlogn)
+(O) Tn=Tn/2 +nlogn      (W) T=O(n^2)
+(P) Tn=Tn?1 +logn       (X) Tn=O(log^2n)", M-W N-V O-U P-X, M-W N-U O-X P-V,M-V N-W O-X P-U,M-W N-U O-V P-X,b
+"Consider the following C function definition.
+int Trial (int a, int b, int c)
+{
+    if ((a >= b) && (c < b) return b;
+    else if (a>=b) return Trial(a, c, b);
+    else return Trial(b, a, c);
+}
+The function Trial:","finds the maximum of a, b and c","finds the minimum of a, b and c"," finds the middle number of a, b and c",None of the above,d
+"What value would the following function return for the input x=95 ?
+function fun (x:integer):integer;
+Begin
+  If x >100 then fun = x-10
+  Else fun = fun(fun( x+11))
+End;",89,90,91,92,c
+"Quicksort is run on two inputs shown below to sort in ascending order taking first element as pivot
+i) 1, 2, 3,......., n
+ii) n, n-1, n-2,......, 2, 1 
+Let C1 and C2 be the number of comparisons made for the inputs (i) and (ii) respectively. Then,",C1 < C2,C1 > C2,C1 = C2, We cannot say anything for arbitrary n,c
+"What is the time complexity of following function fun()? Assume that log(x) returns log value in base 2.
+void fun()
+{
+   int i, j;
+   for (i=1; i<=n; i++)
+      for (j=1; j<=log(i); j++)
+         printf(""GeeksforGeeks"");
+}",?(n),?(nLogn),?(n^2),?(n^2(Logn)),b
