@@ -73,7 +73,11 @@ def questions():
 	#mark=[10,20,30,40,50,60,70,80,90]
 	mark=userdata[3:13]
 	i=ytr.index(max(ytr))
-	print i
+	print i	
+	outputval=eff+[xyz * 100 for xyz in ytr]+[i]
+	with open("output.csv", "a") as f:
+   	 writer = csv.writer(f)
+    	 writer.writerow(outputval)
 	session['subject']=i
 	if mark[i]>75:
 		csvFile = open("questions/%02dh.csv"%i, "rb")
@@ -138,21 +142,29 @@ def dashboard():
 	
 	labels = ["oper sym","Comp Net","theory comp.","comp arch","compiler","maths","data struc","Algorithm","digital elect","DBMs"]
 	values = data[3:13] #[10,9,8,7,6,4,7,8,6,7]
+	number=data[23:33]	
 	if not cur==uslog[1]:
-		dbHandler.insertlife(username,cur,values)
+		dbHandler.insertlife(username,cur,values,number)
 	lifedata=dbHandler.retrievelife(username)
 	lifelabel=[]
 	lifevalue=[]
+	qnnumber=[]
 	print lifedata
 	for life in lifedata:
 		life=list(life)
 		lifelabel.append(life[1])
-		life=life[2:12]
+		month=life[12:22]		
+		life=life[2:12]		
+		print month
+		monthqn=sum(month)
+		qnnumber.append(monthqn)
 		lifevalue.append(life)
 	print lifelabel
 	print lifevalue
 	lifedat=list(lifedata)
-	return render_template("dashboard.html" , values=values, labels=labels,username=username,lifelabel=lifelabel, lifevalue=lifevalue)
+	totalqn=sum(data[23:33])-monthqn
+	print qnnumber
+	return render_template("dashboard.html" , values=values, labels=labels,username=username,lifelabel=lifelabel, lifevalue=lifevalue, qnnumber=qnnumber,totalqn=totalqn)
  
 @app.route("/notes")
 def notes():

@@ -23,10 +23,10 @@ def updateuser(username,password,email,phone):
 	con.commit()
 	con.close()
 
-def insertlife(username,current,values):
+def insertlife(username,current,values,number):
 	con = sql.connect("database.db")
 	cur = con.cursor()
-	values=[current]+values
+	values=[current]+values+number
 	username=str(username)
 	username.lstrip('u')
 	values=[username]+values

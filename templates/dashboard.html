@@ -93,8 +93,10 @@
                 </ul>
             </div>
         </div>
+
+<nav >
+            
         <div class="main-panel">
-            <nav class="navbar navbar-transparent navbar-absolute">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         
@@ -102,7 +104,7 @@
                     </div>
                     
                 </div>
-            </nav>
+         
             <div class="content">
                 <div class="container-fluid"><!--
                     <div class="row">
@@ -147,11 +149,25 @@
                     </div>-->
                     <div class="row">
                         <div class="col-md-6">
+			<div class="col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header" data-background-color="green">
+                                    <i class="material-icons">store</i>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category">Monthly target</p>
+                                    <h3 class="title">{%print totalqn%}/100</h3>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        
                             <div class="card">
                                 <div  style="height:500;width:700;" data-background-color="green">
                                     <!--<div class="ct-chart" id="dailySalesChart">
                                                                         </div>-->
 				<canvas style="height:300px;width:500px;" id="chart"></canvas>
+			
 <script>
    // bar chart data
    var barData = {
@@ -188,14 +204,66 @@
    });
  
 </script>
+
                                 </div>
                                 <div class="card-content">
                                     <h4 class="title">Net performance analysis</h4>
                                     <p class="category">
 
                                 </div>
+<br>
+</div>
+                            <div class="card">
+                                <div  style="height:500;width:700;" data-background-color="blue">
+                                    <!--<div class="ct-chart" id="dailySalesChart">
+                                                                        </div>-->
+				<canvas style="height:300px;width:500px;" id="qnchart"></canvas>
+			
+<script>
+   // bar chart data for question
+   var barData = {
+   labels : [{% for item in lifelabel %}
+                  "{{item}}",
+              {% endfor %}],
+   datasets : [
+      {
+            fillColor: "rgba(255,100,100,1)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+         data : [{% for item in qnnumber %}
+                      {{item}},
+                    {% endfor %}]
+      }
+      ]
+   }
+ 
+   // get bar chart canvas
+   var mychart = document.getElementById("qnchart").getContext("2d");
+ 
+   steps = 10
+   max = 100
+   // draw bar chart
+   new Chart(mychart).Bar(barData, {
+        scaleOverride: true,
+        scaleSteps: steps,
+        scaleStepWidth: Math.ceil(max / steps),
+        scaleStartValue: 0,
+        scaleShowVerticalLines: true,
+        scaleShowGridLines : true,
+        barShowStroke : true,
+        scaleShowLabels: true
+   });
+ 
+</script>
                             </div>
+ 				<div class="card-content">
+                                    <h4 class="title">hardwork analysis</h4>
+                                    <p class="category">
+
+                                </div>
                         </div>
+
+</div>
                         <div class="col-md-6">
                             <div class="card">
                                 <div class="card-header card-chart" data-background-color="orange">
@@ -366,6 +434,7 @@
  
  
 </script>
+
 <p><font color="#002b36">Operating system </font>
 <font color="#dc322f">    &nbsp  Computer networks</font>
 <font color="#b58900"> &nbsp theory of comp</font></p>
@@ -376,6 +445,7 @@
 <font color="#2ca02c"> &nbsp  Algorithms</font>
 <font color="#c7bfaa"> &nbsp Digital Electronics</font></p>
 <p><font color="#7a339c">DBMs </font></p>
+</div>
                                 <div class="card-content">
                                     <h4 class="title">Subject Analysis</h4>
                                    
@@ -401,7 +471,7 @@
                             </div>
                         </div>
                         
-<!--
+
                         <div class="col-lg-6 col-md-6">
                             <div class="card">
                                 <div class="card-header" data-background-color="orange">
@@ -444,7 +514,9 @@
                                     </table>
                                 </div>
                             </div>
-                        </div>-->
+                        </div>
+   </nav>
+	
                     </div>
                 </div>
             </div>
